@@ -18,42 +18,51 @@ SAV8 is an in-browser 8-channel digital mixer for audio and video work. It can a
 - Microphone: Use the dropdown to select mic. Speak into your default system input. Mic turns off when you select another input.
 - Tone: Built-in tone generator (sawtooth wave, 5s duration for demo).
 
-Master Channel
+### Master Channel
 
-Mute: Mutes all output.
-Volume, Pan, Tone: Controls for overall output.
-Effect: Toggles the reverb effect on/off for the master output.
-Master Meters: Stereo level meters for overall output.
+- Mute: Mutes all output.
+- Volume, Pan, Tone: Controls for overall output.
+- Effect: Toggles the reverb effect on/off for the master output.
+- Master Meters: Stereo level meters for overall output.
 
-Effects Unit
-Reverb: Controls the level of reverb effect applied to channels with effect send enabled.
+E### ffects Unit
+- Reverb: Controls the level of reverb effect applied to channels with effect send enabled.
 
-Supported File Types
+### Supported File Types
 
-Audio: Most web-friendly formats (mp3, wav, ogg, m4a etc.).
-Video: mp4, webm, ogg. (Audio only, no video display in this version.)
-Not Supported: avi and some proprietary formats.
+- Audio: Most web-friendly formats (mp3, wav, ogg, m4a etc.).
+- Video: mp4, webm, ogg. (Audio only, no video display in this version.) Not Supported: avi and some proprietary formats.
 
-Tips & Troubleshooting
+### Tips & Troubleshooting
 
-Browser Autoplay: Audio context may need an initial user action (click/select) to start. If mic doesn't work immediately, try loading and playing an audio file first, or just click once in the mixer area.
-Microphone: Grant permission when prompted. Mic stops as soon as you select another input.
-Video Input: Only audio is used; the video image is not shown in this version.
-Performance: For best results, use a modern browser (Chrome, Edge, Firefox). Some features may not work on mobile or older browsers.
-Files Don't Play: Try converting to a supported format if a file fails to load.
-Keyboard & Accessibility
-Most controls support keyboard navigation (Tab, Enter, Space, Arrow keys on sliders).
+- Browser Autoplay: Audio context may need an initial user action (click/select) to start. If mic doesn't work immediately, try loading and playing an audio file first, or just click once in the mixer area.
+- Microphone: Grant permission when prompted. Mic stops as soon as you select another input.
+- Video Input: Only audio is used; the video image is not shown in this version.
+- Performance: For best results, use a modern browser (Chrome, Edge, Firefox). Some features may not work on mobile or older browsers.
+- Files Don't Play: Try converting to a supported format if a file fails to load.
 
-Installing
+### Keyboard & Accessibility
+Most controls support keyboard navigation (Tab, Enter, Space, Arrow keys on sliders). No speech control
+
+### Installing
 
 Copy the files to a server or locally and you are ready to go. It's a node free zone.
 
-License
+### License
 
 Creative commons license - CC BY-SA 
 
-About
+### About
 
 SAV8 is a web-based mixer for creative audio work, prototyping, and fun!
 
 Created by CD-Xbow with significant help from his silicon friend, GitHub Copilot.
+
+### Future plans 
+
+- support midi files, this would be attemt number 2 as the the other failed dismally.
+- Make a puter app out of it
+- More FX
+- Better Eq
+
+
