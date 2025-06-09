@@ -4,6 +4,8 @@
 # SAV:8
 SAV8 is a web based  8 input streo audio mixing desk built with plain HTML, CSS and Javascript. 
 
+[Try it out](https://mixer.puter.site/)
+
 ## Overview
 SAV:8 is an in-browser 8-channel digital mixer for audio and video work. It can accept 8 input sources at a time, including audio files, video files (audio only), microphone, or a built-in tone generator. These inputs can be mono or streo, so we could say its a potential 16 track mixer. 
 
