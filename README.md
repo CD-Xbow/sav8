@@ -1,24 +1,22 @@
 # sav8
-SAV8 is a web based  8 input audio mixing desk 
+SAV8 is a web based  8 input streo audio mixing desk built with plain HTML, CSS and Javascript
 
 ## Overview
-SAV8 is an in-browser 8-channel digital mixer for audio and video. Load up to 8 sources per session, including audio files, video files (audio only), microphone, or a built-in tone generator.
+SAV8 is an in-browser 8-channel digital mixer for audio and video work. It can accept 8 input sources at a time, including audio files, video files (audio only), microphone, or a built-in tone generator. These input can be mono or streo, so we could say its a potential 16 track mixer. 
 
-This help file covers the version before the video display window feature.
+### Input Channel 
 
-Input Channel 
-
-Input Selector: Choose source for the channel: File (audio), Video (extracts audio, no video display), Microphone, or Tone (synth).
-Open Button: For file/video inputs, click Open to select a file. Supported video: mp4, webm, ogg (no AVI).
-File Name: The name of the loaded file appears below the input selector.
-Mute Button: Silences the channel. Next to it is a LED-style input meter showing signal level.
-Volume: Adjusts the loudness of the channel.
-Pan: Places the sound left/right in the stereo field.
-Tone: Simple EQ (peaking filter) for the channel.
-Effect Send: Sends part of the signal to the reverb effect unit.
-Transport Controls: For file/video, use Play, Pause, Stop, and seek slider. (For video, only audio is played.)
-Microphone: Use the dropdown to select mic. Speak into your default system input. Mic turns off when you select another input.
-Tone: Built-in tone generator (sawtooth wave, 5s duration for demo).
+- Input Selector: Choose source for the channel: File (audio), Video (extracts audio, no video display), Microphone, or Tone (synth).
+- Open Button: For file/video inputs, click Open to select a file. Supported video: mp4, webm, ogg (no AVI).
+- File Name: The name of the loaded file appears below the input selector.
+- Mute Button: Silences the channel. Next to it is a LED-style input meter showing signal level.
+- Volume: Adjusts the loudness of the channel.
+- Pan: Places the sound left/right in the stereo field.
+- Tone: Simple EQ (peaking filter) for the channel.
+- Effect Send: Sends part of the signal to the reverb effect unit.
+- Transport Controls: For file/video, use Play, Pause, Stop, and seek slider. (For video, only audio is played.)
+- Microphone: Use the dropdown to select mic. Speak into your default system input. Mic turns off when you select another input.
+- Tone: Built-in tone generator (sawtooth wave, 5s duration for demo).
 
 Master Channel
 
