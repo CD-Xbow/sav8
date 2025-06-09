@@ -1,8 +1,11 @@
-# sav8
+
+
+
+# SAV:8
 SAV8 is a web based  8 input streo audio mixing desk built with plain HTML, CSS and Javascript. 
 
 ## Overview
-SAV8 is an in-browser 8-channel digital mixer for audio and video work. It can accept 8 input sources at a time, including audio files, video files (audio only), microphone, or a built-in tone generator. These inputs can be mono or streo, so we could say its a potential 16 track mixer. 
+SAV:8 is an in-browser 8-channel digital mixer for audio and video work. It can accept 8 input sources at a time, including audio files, video files (audio only), microphone, or a built-in tone generator. These inputs can be mono or streo, so we could say its a potential 16 track mixer. 
 
 There is no recording function, you'll need a browser extention or an app like Audacity. 
 
@@ -27,8 +30,8 @@ There is no recording function, you'll need a browser extention or an app like A
 - Effect: Toggles the reverb effect on/off for the master output.
 - Master Meters: Stereo level meters for overall output.
 
-E### ffects Unit
-- Reverb: Controls the level of reverb effect applied to channels with effect send enabled.
+### Effects Unit
+- Reverb: Controls the level of reverb effect applied to channels with an effects send.
 
 ### Supported File Types
 
