@@ -1,8 +1,10 @@
 # sav8
-SAV8 is a web based  8 input streo audio mixing desk built with plain HTML, CSS and Javascript
+SAV8 is a web based  8 input streo audio mixing desk built with plain HTML, CSS and Javascript. 
 
 ## Overview
-SAV8 is an in-browser 8-channel digital mixer for audio and video work. It can accept 8 input sources at a time, including audio files, video files (audio only), microphone, or a built-in tone generator. These input can be mono or streo, so we could say its a potential 16 track mixer. 
+SAV8 is an in-browser 8-channel digital mixer for audio and video work. It can accept 8 input sources at a time, including audio files, video files (audio only), microphone, or a built-in tone generator. These inputs can be mono or streo, so we could say its a potential 16 track mixer. 
+
+There is no recording function, you'll need a browser extention or an app like Audacity. 
 
 ### Input Channel 
 
