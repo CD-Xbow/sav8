@@ -39,6 +39,7 @@ There is no recording function, you'll need a browser extention or an app like A
 
 - Audio: Most web-friendly formats (mp3, wav, ogg, m4a etc.).
 - Video: mp4, webm, ogg. (Audio only, no video display in this version.) Not Supported: avi and some proprietary formats.
+- MIDI: supports playing midi files through the built in midi player, I use this one: https://github.com/cifkao/html-midi-player
 
 ### Tips & Troubleshooting
 
