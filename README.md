@@ -68,7 +68,7 @@ Created by CD-Xbow with significant help from his silicon friend, GitHub Copilot
 
 ### Future plans 
 
-- support midi files, this would be attemt number 2 as the the other failed dismally.
+- support MOD files
 - Make a puter app out of it
 - More FX
 - Better Eq
