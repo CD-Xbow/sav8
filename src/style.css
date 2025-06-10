@@ -1,0 +1,413 @@
+﻿body {
+  font-family: system-ui, sans-serif;
+  background: #181818;
+  color: #eee;
+  margin: 0;
+  padding: 20px;
+}
+
+h1 {
+  color: #ffa500;
+  font-size: 1.7em;
+  margin-bottom: 0.6em;
+  margin-top: 0.2em;
+}
+
+button, input[type=button] {
+  font-family: inherit;
+  font-size: 1em;
+}
+
+#help-btn {
+  position: absolute;
+  top: 14px;
+  right: 18px;
+  background: #252525;
+  color: #ffa500;
+  border: none;
+  border-radius: 6px;
+  padding: 6px 16px;
+  font-size: 1em;
+  cursor: pointer;
+  z-index: 10;
+  transition: background 0.2s;
+}
+
+#help-btn:hover {
+  background: #404040;
+}
+
+#mixer-container {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 36px;
+}
+
+/* Horizontal scroll for channels */
+#channels {
+  display: flex;
+  flex-direction: row;
+  gap: 18px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-wrap: nowrap;
+  min-width: 0;
+  overflow-x: auto;
+  padding-bottom: 10px;
+  max-width: 76vw;
+  scrollbar-color: #ffb700 #232323;
+  scrollbar-width: thin;
+}
+
+.channel {
+  background: #232323;
+  border-radius: 10px;
+  padding: 14px 10px 12px 10px;
+  box-shadow: 0 0 10px #0006;
+  min-width: 220px;
+  max-width: 270px;
+  flex: 0 0 240px;
+  margin-bottom: 18px;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  position: relative;
+  border: 1.5px solid #2f2f2f;
+}
+
+.channel-header {
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 10px;
+  font-size: 1.09em;
+  color: #ffd580;
+  letter-spacing: 0.04em;
+}
+
+.input-source {
+  width: 98%;
+  margin-bottom: 3px;
+  font-size: 1em;
+  background: #191919;
+  color: #ffa500;
+  border: 1px solid #383838;
+  border-radius: 6px;
+  padding: 3px 6px 3px 4px;
+}
+
+.input-filename {
+  font-size: 0.93em;
+  color: #f7c873;
+  margin-bottom: 3px;
+  min-height: 1.1em;
+  padding-left: 2px;
+}
+
+/* New arrangement: mute button and led meter side by side */
+.channel-top-controls {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 3px;
+}
+
+
+
+.channel .mute {
+  background: #2e2e2e;
+  color: #ffa500;
+  border: none;
+  border-radius: 7px;
+  padding: 3px 13px;
+  cursor: pointer;
+  transition: background 0.2s;
+  min-width: 48px;
+  font-size: 1em;
+}
+
+.channel .mute.active {
+  background: #750000;
+  color: #fff;
+}
+
+.led-meter {
+  background: #222;
+  border-radius: 3px;
+  border: 1px solid #333;
+  margin-top: 0;
+  margin-bottom: 0;
+  display: block;
+}
+
+.channel-volume-row {
+  margin-bottom: 7px;
+  margin-top: 3px;
+}
+
+.channel-volume-row label {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-size: 0.98em;
+  color: #ffe3ad;
+  gap: 7px;
+}
+
+.channel-volume-row input[type=range] {
+  flex: 1;
+  margin-left: 8px;
+  accent-color: #ffa500;
+  background: #1e1e1e;
+  border-radius: 4px;
+}
+
+.channel-volume-row input[type=range]:focus {
+  outline: 2px solid #ffa500;
+}
+
+.file-btn-wrap,
+.video-btn-wrap,
+.midi-btn-wrap {
+  display: inline-block;
+  position: relative;
+  margin-bottom: 5px;
+}
+
+.file-btn-label,
+.video-btn-label,
+.midi-btn-label {
+  min-width: 36px;
+  height: 28px;
+  padding: 0 4px;
+  border: none;
+  background: #333;
+  color: #fff;
+  font-size: 0.97em;
+  border-radius: 4px;
+  vertical-align: middle;
+  cursor: pointer;
+  z-index: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 2px;
+}
+
+.file-btn-wrap input[type=file], .video-btn-wrap input[type=file], .midi-btn-wrap input[type=file] {
+  opacity: 0;
+  width: 50px;
+  height: 28px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  cursor: pointer;
+  z-index: 2;
+  margin: 0;
+  padding: 0;
+}
+
+.file-controls {
+  margin: 3px 0 6px 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 5px;
+}
+
+.file-controls button {
+  background: #292929;
+  color: #ffcf70;
+  padding: 2px 13px;
+  font-size: 1em;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.file-controls button:hover {
+  background: #444;
+}
+
+.file-controls .seek {
+  flex: 1;
+  min-width: 50px;
+}
+
+.file-controls .time {
+  font-size: 0.95em;
+  color: #ffebbc;
+  margin-left: 3px;
+}
+
+.channel label {
+  font-size: 0.98em;
+  margin-bottom: 2px;
+  margin-top: 2px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  color: #ffe3ad;
+  gap: 7px;
+}
+
+.channel input[type=range]:focus {
+  outline: 2px solid #ffa500;
+}
+
+.channel .send {
+  accent-color: #7de2d1;
+}
+
+/* Master/Effects area: three vertical panels */
+#right-panels {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 18px;
+  min-width: 220px;
+  max-width: 320px;
+  position: relative;
+  top: 0;
+}
+
+.effects-panel,
+.master-panel,
+.output-meters-panel {
+  background: #22282b;
+  border-radius: 10px;
+  border: 1.5px solid #2d3c41;
+  padding: 14px 16px 10px 16px;
+  margin-bottom: 0;
+  min-width: 170px;
+  margin-top: 0;
+}
+
+.effects-panel h2,
+.master-panel h2,
+.output-meters-panel h2 {
+  margin-bottom: 8px;
+  font-size: 1.11em;
+  font-weight: bold;
+  color: #97f5f5;
+}
+
+.master-panel {
+  background: #1a2029;
+  border: 2px solid #28455c;
+  margin-top: 0;
+}
+
+.master-panel h2 {
+  color: #91d5ff;
+  margin-bottom: 8px;
+}
+
+.master-panel .mute {
+  background: #2e2e2e;
+  color: #91d5ff;
+}
+
+.master-panel .effect-send { 
+  background: #2e2e2e;
+  color: #91d5ff;
+}
+
+
+.master-panel label {
+  color: #ffe3ad;
+  font-size: 0.95em;
+  display: flex;
+  align-items: center;
+  margin-bottom: 6px;
+}
+
+.output-meters-panel {
+  background: #181c1f;
+  border: 1.5px solid #38404a;
+  padding-bottom: 18px;
+}
+
+#master-meters {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  margin-top: 2px;
+  justify-content: center;
+}
+
+/* MIDI Player Slot at bottom of channel */
+.channel-midi-slot {
+  margin-top: auto;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  min-height: 64px;
+  padding-top: 8px;
+  padding-bottom: 2px;
+}
+
+.channel-midi-slot-inner {
+  display: flex;
+  justify-content: center;
+  background: #1a1a1a;
+  border: 1.5px solid #444;
+  border-radius: 12px;
+  padding: 10px 8px 8px 8px;
+  box-shadow: 0 2px 18px #000b;
+  min-width: 220px;
+  min-height: 56px;
+  position: relative;
+}
+
+.channel-midi-slot-close {
+  color: #ffa500;
+  background: none;
+  border: none;
+  font-size: 1.2em;
+  position: absolute;
+  top: 0;
+  right: 8px;
+  cursor: pointer;
+  z-index: 2;
+  padding: 2px 6px 2px 4px;
+  font-weight: bold;
+}
+
+@media (max-width: 1350px) {
+  #channels {
+    gap: 12px;
+  }
+  .channel {
+    min-width: 170px;
+    max-width: 220px;
+    flex-basis: 180px;
+  }
+  #right-panels {
+    min-width: 160px;
+    max-width: 220px;
+  }
+}
+
+@media (max-width: 1000px) {
+  #channels {
+    flex-wrap: wrap;
+    gap: 12px;
+    max-width: 98vw;
+  }
+  .channel {
+    min-width: 140px;
+    max-width: 170px;
+    flex-basis: 150px;
+    font-size: 0.98em;
+  }
+  .channel-header {
+    font-size: 0.96em;
+  }
+}

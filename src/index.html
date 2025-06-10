@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>SAV8 - 8 track digital audiovisual mixer</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/combine/npm/tone@14.7.58,npm/@magenta/music@1.23.1/es6/core.js,npm/focus-visible@5,npm/html-midi-player@1.4.0"></script>
+  <style type="text/css">
+.auto-style1 {
+	color: #E61919;
+}
+</style>
+</head>
+<body>
+  <button id="help-btn" title="Help">Help</button>
+  <h1 class="auto-style1">SAV8 - 8 track digital audiovisual mixer</h1>
+  <div id="mixer-container">
+    <div id="channels"></div>
+    <div id="right-panels">
+      <div class="effects-panel" id="effects-unit">
+        <h2>Effects</h2>
+        <label>Reverb <input type="range" min="0" max="1" step="0.01" value="0" class="reverb"></label>
+      </div>
+      <div class="master-panel" id="master-panel">
+        <h2>Master</h2>
+        <button class="mute">Mute</button>
+        <label>Volume <input type="range" min="0" max="1" step="0.01" value="1" class="volume"></label>
+        <label>Pan <input type="range" min="-1" max="1" step="0.01" value="0" class="pan"></label>
+        <label>Tone <input type="range" min="-30" max="30" step="1" value="0" class="tone"></label>
+        <button class="effect-send">Effect</button>
+      </div>
+      <div class="output-meters-panel">
+        <h2>Output</h2>
+        <div id="master-meters">
+          <canvas id="meter-left" width="20" height="120"></canvas>
+          <canvas id="meter-right" width="20" height="120"></canvas>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="mixer.js"></script>
+</body>
+</html>
